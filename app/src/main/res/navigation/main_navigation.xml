@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/rootFragment">
+
+    <fragment
+        android:id="@+id/rootFragment"
+        android:name="com.vokod.properbackstack.RootFragment"
+        android:label="Root"
+        tools:layout="@layout/fragment_root">
+        <action
+            android:id="@+id/action_rootFragment_to_level1Fragment"
+            app:destination="@id/level1navigation" />
+    </fragment>
+
+    <navigation android:id="@+id/level1navigation"
+        app:startDestination="@id/level1Fragment">
+        <fragment
+            android:id="@+id/level1Fragment"
+            android:name="com.vokod.properbackstack.Level1Fragment"
+            android:label="Level 1"
+            tools:layout="@layout/fragment_level1">
+            <action
+                android:id="@+id/action_level1Fragment_to_level2Fragment"
+                app:destination="@id/level2Fragment" />
+
+            <deepLink app:uri="https://properbackstack.com/level1" />
+        </fragment>
+        <fragment
+            android:id="@+id/level2Fragment"
+            android:name="com.vokod.properbackstack.Level2Fragment"
+            android:label="Level 2"
+            tools:layout="@layout/fragment_level2">
+
+            <deepLink app:uri="https://properbackstack.com/level1/level2" />
+        </fragment>
+    </navigation>
+</navigation>
