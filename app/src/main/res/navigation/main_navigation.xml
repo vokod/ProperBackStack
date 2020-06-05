@@ -15,8 +15,13 @@
             app:destination="@id/level1navigation" />
     </fragment>
 
-    <navigation android:id="@+id/level1navigation"
+    <navigation
+        android:id="@+id/level1navigation"
         app:startDestination="@id/level1Fragment">
+        <argument
+            android:name="number"
+            app:argType="integer" />
+
         <fragment
             android:id="@+id/level1Fragment"
             android:name="com.vokod.properbackstack.Level1Fragment"
@@ -26,15 +31,28 @@
                 android:id="@+id/action_level1Fragment_to_level2Fragment"
                 app:destination="@id/level2Fragment" />
 
-            <deepLink app:uri="https://properbackstack.com/level1" />
+            <argument
+                android:name="number"
+                app:argType="integer" />
+
+            <deepLink app:uri="https://properbackstack.com/level1/{number}" />
+
         </fragment>
+
         <fragment
             android:id="@+id/level2Fragment"
             android:name="com.vokod.properbackstack.Level2Fragment"
             android:label="Level 2"
             tools:layout="@layout/fragment_level2">
 
-            <deepLink app:uri="https://properbackstack.com/level1/level2" />
+            <argument
+                android:name="word"
+                app:argType="string" />
+            <argument
+                android:name="number"
+                app:argType="integer" />
+
+            <deepLink app:uri="https://properbackstack.com/level2/{number}/{word}" />
         </fragment>
     </navigation>
 </navigation>

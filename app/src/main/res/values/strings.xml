@@ -4,5 +4,6 @@
     <string name="hello_level_2">Hello level 2</string>
     <string name="to_level_1">To level 1</string>
     <string name="to_level_2">To level 2</string>
+    <string name="nowhere_to_go">No more levels</string>
     <string name="hello_root_fragment">Hello root fragment</string>
 </resources>

@@ -26,7 +26,7 @@ class RootFragment : Fragment() {
        view.findViewById<Toolbar>(R.id.toolbar)
             .setupWithNavController(navController, appBarConfiguration)
         view.findViewById<Button>(R.id.btn)?.setOnClickListener {
-            navController.navigate(RootFragmentDirections.actionRootFragmentToLevel1Fragment())
+            navController.navigate(RootFragmentDirections.actionRootFragmentToLevel1Fragment(1234))
         }
 
         return view

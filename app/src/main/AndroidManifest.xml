@@ -29,7 +29,7 @@
                     android:scheme="https" />
                 <data
                     android:host="properbackstack.com"
-                    android:pathPrefix="/level1/level2"
+                    android:pathPrefix="/level2"
                     android:scheme="https" />
 
             </intent-filter>
