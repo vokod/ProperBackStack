@@ -6,4 +6,8 @@
     <string name="to_level_2">To level 2</string>
     <string name="nowhere_to_go">No more levels</string>
     <string name="hello_root_fragment">Hello root fragment</string>
+    <string name="show_notification">Show notification</string>
+    <string name="notification_channel_title">Proper back stack notification channel title</string>
+    <string name="notification_channel_desc">\" Proper back stack notification channel description\"</string>
+    <string name="notification_title">Proper back stack notification</string>
 </resources>
